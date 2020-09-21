@@ -4,23 +4,41 @@ using UnityEngine;
 
 public class warpScript : MonoBehaviour
 {
+    public GameObject masterWarp;
     public Transform teleportLocation;
-    private bool isOn = true;
-
+    private bool isOn = false;
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
 
-        Debug.Log("trigger in warp");
-        if (isOn && "Player".Equals(GetComponent<CircleCollider2D>().gameObject.tag))
+        if (isOn && "Player".Equals(col.gameObject.tag))
         {
-            transform.position = teleportLocation.position;
-            //ToggleActive();
+            Debug.Log(col.gameObject.tag);
+            col.transform.position = teleportLocation.position;
+            masterWarp.GetComponent<WarpRespawn>().ToggleSet();
         }
     }
 
+    void turnOff() 
+    {
+        this.GetComponent<CircleCollider2D>().enabled = false;
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        isOn = false;
+    }
+    void turnOn()
+    {
+        this.GetComponent<CircleCollider2D>().enabled = true;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        isOn = true;
+    }
     public void ToggleActive()
     {
-        isOn = !isOn;
+        if (isOn)
+        {
+            turnOff();
+        }else
+        {
+            turnOn();
+        }
     }
 }

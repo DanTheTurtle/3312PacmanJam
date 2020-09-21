@@ -6,19 +6,21 @@ public class WarpRespawn : MonoBehaviour
 {
     public GameObject warp1;
     public GameObject warp2;
+    public float respawnTime = 30f;
     // Start is called before the first frame update
     void Start()
     {
-        //warp1.ToggleActive();
-        //warp2.ToggleActive();
-        Invoke("ToggleSet",30);
+        ToggleSet();
     }
 
-    // Update is called once per frame
-    void ToggleSet()
+
+    public void ToggleSet()
     {
-        //warp1.ToggleActive();
-        //warp2.ToggleActive();
-        Invoke("ToggleSet", 30);
+        var link1 = warp1.GetComponent<warpScript>();
+        var link2 = warp2.GetComponent<warpScript>();
+        link1.ToggleActive();
+        link2.ToggleActive();
+        Invoke("ToggleSet", respawnTime);
     }
+
 }
