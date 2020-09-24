@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GemBehavior : MonoBehaviour
 {
-    float value;
+    public float value;
     bool endkey;
 
     void Start()
