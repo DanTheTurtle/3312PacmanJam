@@ -10,10 +10,11 @@ public class GemSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3[] positionArray = new[] { new Vector3(-1f,-1f,0f),
-                                        new Vector3(-0.3f,-1f,0f),
-                                        new Vector3(-0.3f,0.25f,0f),
-                                        new Vector3(-1f,0.25f,0f),
+        Vector3[] positionArray = new[] { new Vector3(-1.17f,0.24f,0f),
+                                        new Vector3(0.1f,-1.07f,0f),
+                                        new Vector3(0.1f,0.23f,0f),
+                                        new Vector3(-1.22f,-1.03f,0f),
+
                                         new Vector3(7.45f,2f,0f),
                                         new Vector3(9.75f,0f,0f),
                                         new Vector3(9.75f,4f,0f),

@@ -5,6 +5,8 @@ using UnityEngine;
 public class GemBehavior : MonoBehaviour
 {
     public float value;
+
+    public AudioClip aClip;
     bool endkey;
 
     void Start()
@@ -17,10 +19,7 @@ public class GemBehavior : MonoBehaviour
         if ("Player".Equals(collision.gameObject.tag))
         {
             ScoreBehavior.instance.ScoreUpdate(value);
-            if (endkey)
-            {
-                //closer to unlocking thing
-            }
+            //AudioSource.PlayClipAtPoint(aClip, transform.position);
             Destroy(this.gameObject);
         }
     }

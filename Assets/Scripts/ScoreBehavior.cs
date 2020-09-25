@@ -25,4 +25,8 @@ public class ScoreBehavior : MonoBehaviour
         float sc = float.Parse(scoreString) + score;
         this.GetComponent<Text>().text = "Score: " + sc.ToString();
     }
+    public void resetScore()
+    {
+        this.GetComponent<Text>().text = "Score: 0";
+    }
 }
