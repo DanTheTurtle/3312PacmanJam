@@ -10,4 +10,8 @@ public class menubuttons : MonoBehaviour
     {
         Manager.instance.GameStart();
     }
+    public void ResetGame()
+    {
+        Manager.instance.RestartGame();
+    }
 }
