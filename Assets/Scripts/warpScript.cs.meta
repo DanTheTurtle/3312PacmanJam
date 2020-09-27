@@ -3,7 +3,10 @@ guid: 90f6bdfb8937a29499779413e6572ace
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - masterWarp: {instanceID: 0}
+  - teleportLocation: {instanceID: 0}
+  - aClip: {fileID: 8300000, guid: e63278199d028c041876663596dd6fab, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

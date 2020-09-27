@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
+  aClip: {fileID: 8300000, guid: e90b77937aad4424bb737ecff43900b4, type: 3}

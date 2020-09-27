@@ -7,6 +7,7 @@ public class warpScript : MonoBehaviour
     public GameObject masterWarp;
     public Transform teleportLocation;
     private bool isOn = false;
+    public AudioClip aClip;
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,6 +16,7 @@ public class warpScript : MonoBehaviour
         {
             Debug.Log(col.gameObject.tag);
             col.transform.position = teleportLocation.position;
+            AudioSource.PlayClipAtPoint(aClip, transform.position);
             masterWarp.GetComponent<WarpRespawn>().ToggleSet();
         }
     }
