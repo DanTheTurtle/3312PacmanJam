@@ -12,6 +12,15 @@ public class VictoryWarpScript : MonoBehaviour
         this.GetComponent<SpriteRenderer>().enabled = false;
     }
 
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if ("Player".Equals(col.gameObject.tag))
+        {
+            Manager.instance.WinGame();
+        }
+    }
     // Update is called once per frame
     void Update()
     {

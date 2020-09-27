@@ -22,8 +22,8 @@ public class Manager : MonoBehaviour
         }
 
         //TODO make scene transitions work
-        //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
-        //Time.timeScale = 0;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class Manager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    public void StartGame()
+    public void GameStart()
     {
         SceneManager.UnloadSceneAsync("MainMenu");
         Time.timeScale = 1;
@@ -67,5 +67,11 @@ public class Manager : MonoBehaviour
         SceneManager.LoadScene("Game");
         ScoreBehavior.instance.resetScore();
         Time.timeScale = 1;
+    }
+    public void WinGame()
+    {
+        SceneManager.LoadScene("WinScreen");
+        ScoreBehavior.instance.resetScore();
+        Time.timeScale = 0;
     }
 }
