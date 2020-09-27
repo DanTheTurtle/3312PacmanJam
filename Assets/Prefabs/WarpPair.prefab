@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterWarp: {fileID: 8616898415944744221}
   teleportLocation: {fileID: 8616898414866729251}
+  aClip: {fileID: 8300000, guid: e63278199d028c041876663596dd6fab, type: 3}
 --- !u!1 &8616898414866729250
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterWarp: {fileID: 8616898415944744221}
   teleportLocation: {fileID: 8616898414600866789}
+  aClip: {fileID: 8300000, guid: e63278199d028c041876663596dd6fab, type: 3}
 --- !u!1 &8616898415890817142
 GameObject:
   m_ObjectHideFlags: 0
