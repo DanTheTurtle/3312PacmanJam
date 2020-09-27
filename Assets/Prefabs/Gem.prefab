@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 500
+  aClip: {fileID: 8300000, guid: 073ec3ca2b72af044a2adbd7f0fa82c3, type: 3}
 --- !u!60 &-8414148425775997463
 PolygonCollider2D:
   m_ObjectHideFlags: 0
